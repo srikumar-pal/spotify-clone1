@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Inspired Clone</title>
+
+  <!-- Spotify-style Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">Spotify</h2>
+    <ul>
+      <li class="active">🏠 Home</li>
+      <li>🔍 Search</li>
+      <li>📚 Your Library</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <h1>Good Evening</h1>
+
+    <div class="playlist">
+
+      <!-- CARD 1 -->
+      <div class="card">
+        <div class="img-box">
+          <img src="assets/cover1.jpg" alt="cover">
+          <button class="play-btn"
+            data-song="assets/music/song1.mp3"
+            data-title="Lofi Nights"
+            data-artist="DJ Relax">▶</button>
+        </div>
+        <h3>Lofi Nights</h3>
+        <p>DJ Relax</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <div class="img-box">
+          <img src="assets/cover2.jpg" alt="cover">
+          <button class="play-btn"
+            data-song="assets/music/song2.mp3"
+            data-title="Daily Chill"
+            data-artist="Mood Beats">▶</button>
+        </div>
+        <h3>Daily Chill</h3>
+        <p>Mood Beats</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <div class="img-box">
+          <img src="assets/cover3.jpg" alt="cover">
+          <button class="play-btn"
+            data-song="assets/music/song3.mp3"
+            data-title="Late Night Drive"
+            data-artist="Neon Waves">▶</button>
+        </div>
+        <h3>Late Night Drive</h3>
+        <p>Neon Waves</p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- PLAYER -->
+<footer class="player">
+  <div id="nowPlaying">🎵 Not Playing</div>
+
+  <span id="currentTime">0:00</span>
+  <input type="range" id="progressBar" value="0">
+  <span id="duration">0:00</span>
+
+  <div class="controls">
+    <button id="prev">⏮</button>
+    <button id="mainPlay">▶</button>
+    <button id="next">⏭</button>
+  </div>
+
+  <!-- VOLUME -->
+  <div class="volume">
+    <button id="muteBtn">🔊</button>
+    <input type="range" id="volumeBar" min="0" max="100" value="80">
+  </div>
+</footer>
+
+<!-- AUDIO -->
+<audio id="audioPlayer"></audio>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
